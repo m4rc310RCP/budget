@@ -1,5 +1,6 @@
 package br.com.m4rc310.budget.configs;
 
+import org.jfree.util.Log;
 import org.springframework.context.annotation.Configuration;
 
 import br.com.m4rc310.gql.dto.MAuthToken;
@@ -23,12 +24,40 @@ public class MGraphQLSecurityConfig implements IMAuthUserProvider{
 
 	@Override
 	public MUser loadUser(MGraphQLJwtService jwt, MEnumToken type, String token) throws Exception {
-		MUser u = new MUser();
-		u.setUsername("test");
-		u.setPassword("test");
-		u.setRoles("Admin".split(";"));
 		
-		return u;
+		MUser u = null ;
+		
+		switch (type) {
+		case TEST:
+			Log.info(token);
+			int i = token.indexOf(":");
+			String username = token.substring(0, i);
+			String password = token.substring(i+1);
+			
+			
+			if ("text".equalsIgnoreCase(username)) {
+				u = new MUser();
+				u.setUsername(username);
+				u.setPassword(password);
+				u.setRoles("Admin".split(";"));
+				return u;
+			}else {
+				throw new Exception("Invalid credentials");
+			}
+		case BASIC:
+		case BEARER:
+			return u;
+		default:
+			return u;
+		}
+		
+		
+//		MUser u = new MUser();
+//		u.setUsername("test");
+//		u.setPassword("test");
+//		u.setRoles("Admin".split(";"));
+//		
+//		return u;
 	}
 
 	@Override
