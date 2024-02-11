@@ -14,17 +14,18 @@ import lombok.extern.slf4j.Slf4j;
 @GraphQLApi
 public class MServiceTest extends MService{
 
+	@MAuth(roles = {"basic"})
 	@GraphQLQuery(name = QUERY$test, description = DESC$query_test)
 	public String queryTest() {
 		log.info("#query test");
 		return "OK";
 	}
 	
-	@MAuth(roles = "admin")
+	@MAuth(roles = {"admin", "register"})
 	@GraphQLQuery
 	public String makeBasicToken() throws Exception {
 		String token = "%s:%s";
-		token = String.format(token, "basic-user", encoder.encode("1234"));
+		token = String.format(token, "basic-user", "1234");
 		return jwt.encrypt(token);
 	}
 	
