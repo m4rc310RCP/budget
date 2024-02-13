@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br-com-m4rc310</groupId>
 	<artifactId>budget</artifactId>
-	<version>0.0.0</version>
+	<version>0.0.1</version>
 	<name>budget</name>
 	<description>Budget for Control</description>
 	<properties>
@@ -27,7 +27,7 @@
 		<dependency>
 			<groupId>br.com.m4rc310</groupId>
 			<artifactId>br-com-m4rc310-starter</artifactId>
-			<version>1.0.7</version>
+			<version>1.0.10</version>
 		</dependency>
 
 		<dependency>

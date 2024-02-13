@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Lazy;
 
 import br.com.m4rc310.budget.services.MServiceCache;
 import br.com.m4rc310.gql.MUserProvider;
+import br.com.m4rc310.gql.dto.MAuthToken;
 import br.com.m4rc310.gql.dto.MUser;
 import lombok.extern.slf4j.Slf4j;
 
