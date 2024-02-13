@@ -3,17 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>br-com-m4rc310</groupId>
+	<artifactId>budget</artifactId>
+	<version>0.0.1</version>
+	<name>budget</name>
+	<description>Budget for Control</description>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br-com-m4rc310</groupId>
-	<artifactId>budget</artifactId>
-	<version>0.0.1</version>
-	<name>budget</name>
-	<description>Budget for Control</description>
 
 	<properties>
 		<java.version>17</java.version>

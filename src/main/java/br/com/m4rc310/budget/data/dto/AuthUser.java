@@ -1,6 +1,6 @@
 package br.com.m4rc310.budget.data.dto;
 
-import org.hibernate.annotations.ColumnDefault;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import br.com.m4rc310.budget.services.MConst;
 import br.com.m4rc310.gql.dto.MUser;
@@ -38,19 +38,22 @@ public class AuthUser implements MConst {
 	@Column(name = VALUE$password)
 	@GraphQLIgnore
 	private String password;
+	
 	@Column(name = INDICATOR$non_expired)
 	@GraphQLIgnore
 	private boolean accountNonExpired;
+	
 	@GraphQLIgnore
 	@Column(name = INDICATOR$account_non_locked)
 	private boolean accountNonLocked;
+	
 	@GraphQLIgnore
 	@Column(name = INDICATOR$credentials_non_locked)
 	private boolean credentialsNonExpired;
+	
 	@GraphQLIgnore
 	@Column(name = INDICATOR$enabled)
 	private boolean enabled;
-	
 	
 	public static AuthUser from(MUser user) {
 		AuthUser u = new AuthUser();
