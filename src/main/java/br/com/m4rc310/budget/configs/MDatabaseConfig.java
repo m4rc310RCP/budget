@@ -6,7 +6,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import br.com.m4rc310.budget.data.dto.AuthUser;
 import br.com.m4rc310.budget.repositories.AuthUserRepository;
-import br.com.m4rc310.budget.services.MServiceCache;
 import jakarta.annotation.PostConstruct;
 
 @Configuration

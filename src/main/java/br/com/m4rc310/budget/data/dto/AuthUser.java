@@ -1,7 +1,5 @@
 package br.com.m4rc310.budget.data.dto;
 
-import org.springframework.boot.context.properties.bind.DefaultValue;
-
 import br.com.m4rc310.budget.services.MConst;
 import br.com.m4rc310.gql.dto.MUser;
 import io.leangen.graphql.annotations.GraphQLIgnore;

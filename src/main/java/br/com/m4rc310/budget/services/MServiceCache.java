@@ -11,9 +11,7 @@ import org.springframework.stereotype.Service;
 import br.com.m4rc310.budget.data.dto.AuthUser;
 import br.com.m4rc310.budget.repositories.AuthUserRepository;
 import br.com.m4rc310.gql.dto.MUser;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 @EnableCaching
 public class MServiceCache {
